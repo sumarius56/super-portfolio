@@ -14,7 +14,7 @@ function Hero({ pageInfo }: Props) {
     words: [
       'console.log("Hello World!")',
       "{dev Suciu in the house!}",
-      "Guy who loves coffe.tsx",
+      "Guy who loves coffee.tsx",
       "<But loves to code more />",
     ],
     loop: true,
