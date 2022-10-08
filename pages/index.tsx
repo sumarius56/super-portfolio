@@ -96,6 +96,5 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
       projects,
       socials,
     },
-    
   };
 };
