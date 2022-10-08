@@ -12,16 +12,24 @@ function Projects({ projects }: Props) {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 1.5 }}
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin">
+      <motion.div
+        initial={{ opacity: 0, y: -200 }}
+        transition={{ duration: 1.5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin"
+      >
         {projects?.map((project, i) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: -200 }}
+            transition={{ duration: 1.5 }}
+            whileInView={{ opacity: 1, y: 0 }}
             key={i}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
           >
@@ -53,13 +61,31 @@ function Projects({ projects }: Props) {
                 ))}
               </div>
 
-              <p className="text-lg text-center md:text-left">
+              <motion.p 
+              initial={{ opacity: 0,x: -200, }}
+              transition={{ duration: 1.5 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="text-lg text-center md:text-left ">
                 {project?.summary}
-              </p>
+              </motion.p>
+              <br />
+              <motion.div
+                initial={{ opacity: 0, y: -200 }}
+                transition={{ duration: 1.5 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                className="flex items-center justify-center md:text-4xl text-[#F7AB0A]/20 mx-auto max-w-[140px] rounded-3xl  py-1 "
+              >
+                <a
+                  className="animate-pulse transition duration-300 ease-in-out  "
+                  href={project?.linkToBuild}
+                >
+                  Demo
+                </a>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12 " />
     </motion.div>
