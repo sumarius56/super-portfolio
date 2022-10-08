@@ -22,7 +22,7 @@ function ExperienceCard({ experience }: Props) {
         }}
         viewport={{ once: true }}
         className="w-32 h-32 rounded-full  xl:w-[200px] xl:h-[200px] object-cover object-center"
-        src="https://protofolio-one.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FaboutImg.c1fee657.avif&w=2048&q=75"
+        src={urlFor(experience.companyImage).url()}
         alt=""
         //fix the bug with img not uploading
       />
