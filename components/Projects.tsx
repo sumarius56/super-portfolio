@@ -56,16 +56,17 @@ function Projects({ projects }: Props) {
                     src={urlFor(technology.image).url()}
                     key={technology._id}
                     alt=""
-                    className="h-10 w-12"
+                    className="h-10 w-10"
                   />
                 ))}
               </div>
 
-              <motion.p 
-              initial={{ opacity: 0,x: -200, }}
-              transition={{ duration: 1.5 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              className="text-lg text-center md:text-left ">
+              <motion.p
+                initial={{ opacity: 0, x: -200 }}
+                transition={{ duration: 1.5 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                className="text-lg text-center md:text-left "
+              >
                 {project?.summary}
               </motion.p>
               <br />

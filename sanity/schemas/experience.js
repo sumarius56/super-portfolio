@@ -48,5 +48,10 @@ export default {
       type: "array",
       of: [{ type: "string" }],
     },
+    {
+      name: "url",
+      title: "Url",
+      type: "url",
+    },
   ],
 };
