@@ -24,7 +24,8 @@ function Hero({ pageInfo }: Props) {
     delaySpeed: 2000,
   });
 
-  const soundSource = "https://www.mboxdrive.com/ES_Clutch%20-%20STRLGHT.mp3";
+  const soundSource =
+    "https://www.mboxdrive.com/ES_Getaway%20-%20Blac%20Bamboo%20(mp3cut.net).mp3";
 
   const playMusic = (src: string) => {
     const sound = new Howl({
