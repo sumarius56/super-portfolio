@@ -26,7 +26,7 @@ function Hero({ pageInfo }: Props) {
 
   const soundSource = "https://www.mboxdrive.com/ES_Clutch%20-%20STRLGHT.mp3";
 
-  const playMusic = (src:string) => {
+  const playMusic = (src: string) => {
     const sound = new Howl({
       src,
       html5: true,
@@ -43,17 +43,15 @@ function Hero({ pageInfo }: Props) {
     <div className="relative h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
       {openModal && (
-        <div
-         
-          className="flex flex-col absolute bg-black/90 w-full h-screen  items-center justify-center z-50"
-        >
+        <div className="flex flex-col absolute bg-black/90 w-full h-screen  items-center justify-center z-50">
           <motion.p
-           initial={{ opacity: 0, y: -100 }}
-          transition={{
-            duration: 1.5,
-          }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="text-4xl animate-pulse p-10">
+            initial={{ opacity: 0, y: -100 }}
+            transition={{
+              duration: 1.5,
+            }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-4xl animate-pulse p-10"
+          >
             Are you ready for a{" "}
             <span className="decoration-[#F7AB0A]/50 underline">
               top notch experience
