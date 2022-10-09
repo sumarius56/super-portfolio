@@ -75,7 +75,7 @@ function Skills({ skills }: Props) {
             enable: false,
           },
           fullScreen: {
-            enable: true,
+            enable: false,
             zIndex: -1,
           },
           detectRetina: true,
@@ -326,7 +326,7 @@ function Skills({ skills }: Props) {
               center: {
                 x: 50,
                 y: 50,
-                
+
                 radius: 0,
               },
               decay: 0,
