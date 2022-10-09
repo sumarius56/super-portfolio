@@ -28,7 +28,7 @@ function ContactMe({}: Props) {
       initial={{ opacity: 0, y: 500 }}
       transition={{ duration: 1.5 }}
       whileInView={{ opacity: 1, y: 0 }}
-      className="relative h-screen flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center "
+      className="relative h-screen flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center overflow-hidden "
     >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
@@ -94,6 +94,37 @@ function ContactMe({}: Props) {
         transition={{ duration: 2 }}
         whileInView={{ opacity: 1 }}
         className="w-full absolute top-[55%] bg-[#F7AB0A]/10 left-0 h-[112px] -skew-y-12 animate-pulse "
+      />
+      <motion.div
+        initial={{ opacity: 1 }}
+        transition={{ duration: 2, repeat: 1, repeatType: "reverse" }}
+        whileInView={{
+          scale: [1, 2, 2, 3, 1, 0, 1.5, 2, 2.2, 1, 0.5],
+          opacity: [0.1, 0.2, 0.4, 0.8, 0.1, 1, 0, 1],
+        }}
+        className="w-full absolute top-[20%] bg-[#F7AB0A]/10 left-0 h-[90px] skew-y-12 animate-pulse rounded-lg "
+      />
+      <motion.div
+        style={{
+          width: 100,
+          height: 100,
+          borderRadius: 30,
+          
+        }}
+        animate={{ rotate: 360 }}
+        transition={{ ease: "linear", duration: 2, repeat: Infinity }}
+        className="absolute bottom-[22%] left-[92%] bg-[#F7AB0A]/10  h-[90px] skew-y-12 animate-pulse "
+      />
+      <motion.div
+        style={{
+          width: 100,
+          height: 100,
+          borderRadius: 30,
+          
+        }}
+        animate={{ rotate: 360 }}
+        transition={{  duration: 2, repeat: Infinity, repeatType: "reverse" }}
+        className="absolute top-[45%] right-[92%] bg-[#F7AB0A]/10  h-[90px] skew-y-12 animate-pulse "
       />
     </motion.div>
   );
