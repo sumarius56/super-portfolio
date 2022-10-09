@@ -35,25 +35,25 @@ function ExperienceCard({ experience }: Props) {
       whileInView={{opacity: 1}}
       transition={{duration: 2}}
       className="px-0 md:px-10">
-        <h4 className="text-4xl font-light">{experience.jobTitle}</h4>
-        <p className="font-bold text-2xl mt-1">{experience.company}</p>
+        <h4 className="md:text-4xl font-light">{experience.jobTitle}</h4>
+        <p className="font-bold md:text-2xl mt-1">{experience.company}</p>
         <div className="flex space-x-2 my-2 items-center ">
           {experience.technologies.map((technology) => (
             <img
               key={technology._id}
-              className="h-12 w-15 rounded-full"
+              className="h-10 w-10 rounded-full"
               src={urlFor(technology.image).url()}
               alt=""
             />
           ))}
         </div>
-        <p className="uppercase py-5 text-gray-300">
+        <p className="text-sm md:text-base uppercase py-5 text-gray-300">
           {new Date(experience.dateStarted).toDateString()} -{" "}
           {experience.isCurrentlyWorkingHere
             ? "Present"
             : new Date(experience.dateEnded).toDateString()}
         </p>
-        <ul className="list-disc space-y-4 ml-5 text-lg">
+        <ul className="list-disc space-y-4 ml-5 md:text-lg">
           {experience.points.map((point, i) => (
             <li key={i}>{point}</li>
           ))}

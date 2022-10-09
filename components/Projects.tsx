@@ -40,10 +40,10 @@ function Projects({ projects }: Props) {
               viewport={{ once: true }}
               src={urlFor(project?.image).url()}
               alt=""
-              className="h-64 w-64"
+              className="h-10 w-10 md:h-64 md:w-64"
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
+              <h4 className="md:text-4xl font-semibold text-center">
                 {" "}
                 <span className="underline decoration-[#F7AB0A]/50">
                   Case study {i + 1} of {projects.length}:
@@ -65,7 +65,7 @@ function Projects({ projects }: Props) {
                 initial={{ opacity: 0, x: -200 }}
                 transition={{ duration: 1.5 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                className="text-lg text-center md:text-left "
+                className="text-sm md:text-lg text-center md:text-left  "
               >
                 {project?.summary}
               </motion.p>
@@ -74,10 +74,10 @@ function Projects({ projects }: Props) {
                 initial={{ opacity: 0, y: -200 }}
                 transition={{ duration: 1.5 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="flex items-center justify-center md:text-4xl text-[#F7AB0A]/20 mx-auto max-w-[140px] rounded-3xl  py-1 "
+                className="flex relative items-center justify-center md:text-4xl text-[#F7AB0A]/20 mx-auto max-w-[140px] rounded-3xl  py-1 "
               >
                 <a
-                  className="animate-pulse transition duration-300 ease-in-out  "
+                  className="animate-pulse absolute transition duration-300 ease-in-out top-20  "
                   href={project?.linkToBuild}
                 >
                   Demo

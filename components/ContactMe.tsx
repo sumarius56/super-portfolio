@@ -34,22 +34,22 @@ function ContactMe({}: Props) {
         Contact
       </h3>
       <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
+        <h4 className="md:text-4xl font-semibold text-center">
           I have got just what you need.
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk!</span>
         </h4>
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">+40 0771450410</p>
+            <p className="md:text-2xl">+40 0771450410</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">Ocna Mures, Romania</p>
+            <p className="md:text-2xl">Ocna Mures, Romania</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">marius56suciu@gmail.com</p>
+            <p className="md:text-2xl">marius56suciu@gmail.com</p>
           </div>
         </div>
         <form
@@ -58,13 +58,13 @@ function ContactMe({}: Props) {
         >
           <div className="flex space-x-2">
             <input
-              className="contactInput"
+              className="contactInput w-1/2 md:w-fit"
               type="text"
               placeholder="Name"
               {...register("name")}
             />
             <input
-              className="contactInput"
+              className="contactInput w-1/2 md:w-fit"
               type="email"
               placeholder="Email"
               {...register("email")}
@@ -82,7 +82,7 @@ function ContactMe({}: Props) {
             {...register("message")}
           />
           <button
-            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg "
+            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold md:text-lg "
             type="submit"
           >
             Submit
