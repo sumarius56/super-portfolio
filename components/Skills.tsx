@@ -2,12 +2,29 @@ import React from "react";
 import { motion } from "framer-motion";
 import Skill from "./Skill";
 import { Skill as SkillType } from "../typings";
+import { useCallback } from "react";
+import Particles from "react-tsparticles";
+import type { Container, Engine } from "tsparticles-engine";
+import { loadFull } from "tsparticles";
+import particleConfig from "./particleConfig";
 
 type Props = {
   skills: SkillType[];
 };
 
 function Skills({ skills }: Props) {
+  const particlesInit = useCallback(async (engine: Engine) => {
+    console.log(engine);
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(
+    async (container: Container | undefined) => {
+      await console.log(container);
+    },
+    []
+  );
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -31,6 +48,15 @@ function Skills({ skills }: Props) {
           <Skill key={skill._id} skill={skill} directionLeft />
         ))}
       </div>
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={particleConfig}
+        height="100vh"
+        width="100vw"
+        className="absolute top-0 left-0 bg-transparent"
+      />
     </motion.div>
   );
 }

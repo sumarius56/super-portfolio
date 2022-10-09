@@ -109,7 +109,6 @@ function ContactMe({}: Props) {
           width: 100,
           height: 100,
           borderRadius: 30,
-          
         }}
         animate={{ rotate: 360 }}
         transition={{ ease: "linear", duration: 2, repeat: Infinity }}
@@ -120,10 +119,9 @@ function ContactMe({}: Props) {
           width: 100,
           height: 100,
           borderRadius: 30,
-          
         }}
         animate={{ rotate: 360 }}
-        transition={{  duration: 2, repeat: Infinity, repeatType: "reverse" }}
+        transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
         className="absolute top-[45%] right-[92%] bg-[#F7AB0A]/10  h-[90px] skew-y-12 animate-pulse "
       />
     </motion.div>
