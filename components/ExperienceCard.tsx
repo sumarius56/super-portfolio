@@ -9,10 +9,8 @@ type Props = {
 
 function ExperienceCard({ experience }: Props) {
   return (
-    <motion.article
-      initial={{ opacity: 0 }}
-      transition={{ duration: 1.2 }}
-      whileInView={{ opacity: 1 }}
+    <article
+     
       className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden "
     >
       <motion.img
@@ -32,7 +30,11 @@ function ExperienceCard({ experience }: Props) {
         //fix the bug with img not uploading
       />
 
-      <div className="px-0 md:px-10">
+      <motion.div 
+      initial={{opacity: 0}}
+      whileInView={{opacity: 1}}
+      transition={{duration: 2}}
+      className="px-0 md:px-10">
         <h4 className="text-4xl font-light">{experience.jobTitle}</h4>
         <p className="font-bold text-2xl mt-1">{experience.company}</p>
         <div className="flex space-x-2 my-2 items-center ">
@@ -56,8 +58,8 @@ function ExperienceCard({ experience }: Props) {
             <li key={i}>{point}</li>
           ))}
         </ul>
-      </div>
-    </motion.article>
+      </motion.div>
+    </article>
   );
 }
 

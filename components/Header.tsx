@@ -34,11 +34,12 @@ function Header({ socials }: Props) {
             url={social.url}
             fgColor="gray"
             bgColor="transparent"
+            className="link"
           />
         ))}
       </motion.div>
       <Link href="#contact">
-        <motion.div
+        <motion.div 
           initial={{
             x: 500,
             opacity: 0,
@@ -52,15 +53,16 @@ function Header({ socials }: Props) {
           transition={{
             duration: 1.5,
           }}
-          className="flex flex-row items-center text-gray-300 cursor-pointer"
+          className="flex flex-row items-center text-gray-300 cursor-pointer "
         >
           <SocialIcon
             className="cursor-pointer"
             network="email"
             fgColor="gray"
             bgColor="transparent"
+            
           />
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+          <p className="uppercase hidden md:inline-flex text-sm text-gray-400 link ">
             Get in touch
           </p>
         </motion.div>

@@ -89,6 +89,12 @@ function ContactMe({}: Props) {
           </button>
         </form>
       </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        transition={{ duration: 2 }}
+        whileInView={{ opacity: 1 }}
+        className="w-full absolute top-[55%] bg-[#F7AB0A]/10 left-0 h-[112px] -skew-y-12 animate-pulse "
+      />
     </motion.div>
   );
 }
