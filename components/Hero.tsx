@@ -26,7 +26,7 @@ function Hero({ pageInfo }: Props) {
 
   const soundSource = "https://www.mboxdrive.com/ES_Clutch%20-%20STRLGHT.mp3";
 
-  const playMusic = (src) => {
+  const playMusic = (src:string) => {
     const sound = new Howl({
       src,
       html5: true,
