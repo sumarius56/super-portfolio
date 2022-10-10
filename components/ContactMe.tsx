@@ -53,18 +53,18 @@ function ContactMe({}: Props) {
           </div>
         </div>
         <form
-          className="flex flex-col space-y-2 w-fit mx-auto"
+          className="flex flex-col space-y-2 w-fit mx-auto relative "
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="flex space-x-2">
+          <div className="flex  space-x-2">
             <input
-              className="contactInput w-1/2 md:w-fit"
+              className="contactInput  w-1/2 md:w-fit"
               type="text"
               placeholder="Name"
               {...register("name")}
             />
             <input
-              className="contactInput w-1/2 md:w-fit"
+              className="contactInput  w-1/2 md:w-fit"
               type="email"
               placeholder="Email"
               {...register("email")}
@@ -93,7 +93,7 @@ function ContactMe({}: Props) {
         initial={{ opacity: 0 }}
         transition={{ duration: 2 }}
         whileInView={{ opacity: 1 }}
-        className="w-full absolute top-[55%] bg-[#F7AB0A]/10 left-0 h-[112px] -skew-y-12 animate-pulse "
+        className="w-full  absolute  top-[59%] bg-[#F7AB0A]/10 left-0 h-[50px] -skew-y-12 animate-pulse "
       />
       <motion.div
         initial={{ opacity: 1 }}
@@ -102,7 +102,7 @@ function ContactMe({}: Props) {
           scale: [1, 2, 2, 3, 1, 0, 1.5, 2, 2.2, 1, 0.5],
           opacity: [0.1, 0.2, 0.4, 0.8, 0.1, 1, 0, 1],
         }}
-        className="w-full absolute top-[20%] bg-[#F7AB0A]/10 left-0 h-[90px] skew-y-12 animate-pulse rounded-lg "
+        className="w-full z-0 absolute top-[20%] bg-[#F7AB0A]/10 left-0 h-[90px] skew-y-12 animate-pulse rounded-lg "
       />
       <motion.div
         style={{
@@ -112,7 +112,7 @@ function ContactMe({}: Props) {
         }}
         animate={{ rotate: 360 }}
         transition={{ ease: "linear", duration: 2, repeat: Infinity }}
-        className="absolute bottom-[22%] left-[92%] bg-[#F7AB0A]/10  h-[90px] skew-y-12 animate-pulse "
+        className="absolute z-10 bottom-[22%] left-[92%] bg-[#F7AB0A]/10  h-[90px] skew-y-12 animate-pulse "
       />
       <motion.div
         style={{
