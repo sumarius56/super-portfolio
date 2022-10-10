@@ -30,7 +30,7 @@ function ContactMe({}: Props) {
       whileInView={{ opacity: 1, y: 0 }}
       className="relative h-screen flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center overflow-hidden "
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="hidden sm:inline absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
       <div className="flex flex-col space-y-10">
@@ -82,7 +82,7 @@ function ContactMe({}: Props) {
             {...register("message")}
           />
           <button
-            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold md:text-lg "
+            className="bg-[#F7AB0A]  py-2 px-5  sm:py-5 sm:px-10 rounded-md text-black font-bold md:text-lg "
             type="submit"
           >
             Submit

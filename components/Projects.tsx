@@ -77,7 +77,7 @@ function Projects({ projects }: Props) {
                 className="flex relative items-center justify-center md:text-4xl text-[#F7AB0A]/20 mx-auto max-w-[140px] rounded-3xl  py-1 "
               >
                 <a
-                  className="animate-pulse absolute transition duration-300 ease-in-out top-20  "
+                  className="animate-pulse absolute transition duration-300 ease-in-out top-30 sm:top-20  "
                   href={project?.linkToBuild}
                 >
                   Demo
