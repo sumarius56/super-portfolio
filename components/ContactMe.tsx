@@ -137,8 +137,14 @@ function ContactMe({}: Props) {
       <footer>
         <div className="flex space-x-10 justify-center items-center mb-2 sm:mb-5 lg:mb-10 ">
           ©<span className="text-[#F7AB0A]/80">Suciu Marius</span> ™
-          
-          <a href="https://protofolio-one.vercel.app/" target="_blank" className="animate-pulse">Portfolio V1</a>
+          <a
+            href="https://protofolio-one.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="animate-pulse"
+          >
+            Portfolio V1
+          </a>
         </div>
       </footer>
     </div>

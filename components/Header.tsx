@@ -36,6 +36,7 @@ function Header({ socials }: Props) {
             bgColor="transparent"
             className="link"
             target="_blank"
+            rel="noreferrer"
           />
         ))}
       </motion.div>
