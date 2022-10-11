@@ -9,10 +9,7 @@ type Props = {
 
 function ExperienceCard({ experience }: Props) {
   return (
-    <article
-     
-      className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden "
-    >
+    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40  transition-opacity duration-200 overflow-hidden ">
       <motion.img
         initial={{
           y: -100,
@@ -30,12 +27,15 @@ function ExperienceCard({ experience }: Props) {
         //fix the bug with img not uploading
       />
 
-      <motion.div 
-      initial={{opacity: 0}}
-      whileInView={{opacity: 1}}
-      transition={{duration: 2}}
-      className="px-0 md:px-10">
-        <h4 className="md:text-4xl font-light">{experience.jobTitle}</h4>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        className="px-0 md:px-10"
+      >
+        <h4 className="md:text-4xl font-light tracking-widest">
+          {experience.jobTitle}
+        </h4>
         <p className="font-bold md:text-2xl mt-1">{experience.company}</p>
         <div className="flex space-x-2 my-2 items-center ">
           {experience.technologies.map((technology) => (
@@ -53,7 +53,7 @@ function ExperienceCard({ experience }: Props) {
             ? "Present"
             : new Date(experience.dateEnded).toDateString()}
         </p>
-        <ul className="list-disc space-y-4 ml-5 md:text-lg">
+        <ul className="list-disc space-y-4 ml-5 md:text-lg tracking-widest">
           {experience.points.map((point, i) => (
             <li key={i}>{point}</li>
           ))}

@@ -61,7 +61,9 @@ function About({ pageInfo }: Props) {
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background{" "}
         </h4>
-        <p className="md:text-base text-sm">{pageInfo?.backgroundInformation}</p>
+        <p className="md:text-base text-sm leading-3 tracking-widest">
+          {pageInfo?.backgroundInformation}
+        </p>
       </motion.div>
     </motion.div>
   );

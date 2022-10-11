@@ -65,7 +65,7 @@ function Projects({ projects }: Props) {
                 initial={{ opacity: 0, x: -200 }}
                 transition={{ duration: 1.5 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                className="text-sm md:text-lg text-center md:text-left  "
+                className="text-sm md:text-lg text-center md:text-left tracking-widest "
               >
                 {project?.summary}
               </motion.p>

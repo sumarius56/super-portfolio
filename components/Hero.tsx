@@ -87,7 +87,7 @@ function Hero({ pageInfo }: Props) {
           {pageInfo?.role}
         </h2>
         <h1 className="text-4xl lg:text-5xl font-semibold px-10">
-          <span className="mr-3">{text}</span>
+          <span className="mr-3 tracking-widest">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
 

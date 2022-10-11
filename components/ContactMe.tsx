@@ -28,28 +28,28 @@ function ContactMe({}: Props) {
       initial={{ opacity: 0, y: 500 }}
       transition={{ duration: 1.5 }}
       whileInView={{ opacity: 1, y: 0 }}
-      className="relative h-screen flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center overflow-hidden "
+      className="relative h-screen tracking-widest flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center overflow-hidden "
     >
       <h3 className="hidden sm:inline absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
       <div className="flex flex-col space-y-10">
-        <h4 className="md:text-4xl font-semibold text-center">
+        <h4 className="md:text-4xl font-semibold text-center tracking-widest">
           I have got just what you need.
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk!</span>
         </h4>
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="md:text-2xl">+40 0771450410</p>
+            <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse " />
+            <p className="md:text-2xl tracking-widest">+40 0771450410</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="md:text-2xl">Ocna Mures, Romania</p>
+            <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse " />
+            <p className="md:text-2xl tracking-widest">Ocna Mures, Romania</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="md:text-2xl">marius56suciu@gmail.com</p>
+            <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse " />
+            <p className="md:text-2xl tracking-widest">marius56suciu@gmail.com</p>
           </div>
         </div>
         <form
@@ -62,12 +62,14 @@ function ContactMe({}: Props) {
               type="text"
               placeholder="Name"
               {...register("name")}
+              required
             />
             <input
               className="contactInput  w-1/2 md:w-fit"
               type="email"
               placeholder="Email"
               {...register("email")}
+              required
             />
           </div>
           <input
@@ -75,11 +77,13 @@ function ContactMe({}: Props) {
             type="text"
             placeholder="Subject"
             {...register("subject")}
+            required
           />
           <textarea
             className="contactInput"
             placeholder="Message"
             {...register("message")}
+            required
           />
           <button
             className="bg-[#F7AB0A]  py-2 px-5  sm:py-5 sm:px-10 rounded-md text-black font-bold md:text-lg "
