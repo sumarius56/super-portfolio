@@ -35,11 +35,12 @@ function Header({ socials }: Props) {
             fgColor="gray"
             bgColor="transparent"
             className="link"
+            target="_blank"
           />
         ))}
       </motion.div>
       <Link href="#contact">
-        <motion.div 
+        <motion.div
           initial={{
             x: 500,
             opacity: 0,
@@ -60,7 +61,6 @@ function Header({ socials }: Props) {
             network="email"
             fgColor="gray"
             bgColor="transparent"
-            
           />
           <p className="uppercase hidden md:inline-flex text-sm text-gray-400 link ">
             Get in touch

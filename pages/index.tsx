@@ -15,7 +15,6 @@ import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSocials } from "../utils/fetchSocials";
 import { fetchSkills } from "../utils/fetchSkills";
 
-
 type Props = {
   pageInfo: PageInfo;
   experiences: Experience[];
@@ -34,7 +33,6 @@ const Home = ({ pageInfo, projects, skills, socials, experiences }: Props) => {
       </Head>
 
       <Header socials={socials} />
-      
 
       <section id="hero" className="snap-start">
         <Hero pageInfo={pageInfo} />
@@ -58,25 +56,8 @@ const Home = ({ pageInfo, projects, skills, socials, experiences }: Props) => {
 
       <section id="contact" className="snap-start">
         <ContactMe />
+        
       </section>
-      <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
-          <div className="flex items-center justify-center">
-            <img
-              className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
-              src="https://i.imgur.com/EroSTZV.png"
-              alt=""
-            />
-            <p className=" rounded-full filter grayscale hover:grayscale-0 cursor-pointer text-#F7AB0A]/80">
-              ©
-              <span className=" bg-#F7AB0A]/80text-#F7AB0A]/80">
-                Suciu Marius
-              </span>
-              ™
-            </p>
-          </div>
-        </footer>
-      </Link>
     </div>
   );
 };
